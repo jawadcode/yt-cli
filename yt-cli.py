@@ -39,8 +39,8 @@ def draw(frames: List[List[Tuple[int, int, int]]]):
             if not ((i + 1) & 127):
                 frame += '\n'
 
-        time.sleep(0.08)
-        print('\x1b[2J')
+        time.sleep(0.029)
+        print('\x1b[1;1H')
         print(frame)
 
 
@@ -59,7 +59,7 @@ def get_frames(url: str) -> List[List[Tuple[int, int, int]]]:
         '--format', 'worst',
         '--external-downloader', 'ffmpeg',
         '--external-downloader-args',
-        '-s 128x36 -r 10 -pix_fmt bgr24 ./images/frame_%04d.bmp',
+        '-s 128x36 -r 24 -pix_fmt bgr24 ./images/frame_%05d.bmp',
         '--output', './video/%(id)s.%(ext)s',
         url
     ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
