@@ -40,6 +40,8 @@ def draw(frames: List[List[Tuple[int, int, int]]]):
 
 
 def get_frames(url: str) -> List[List[Tuple[int, int, int]]]:
+    shutil.rmtree('./images', ignore_errors=True)
+    shutil.rmtree('./video', ignore_errors=True)
     os.mkdir('./images')
     os.mkdir('./video')
 
