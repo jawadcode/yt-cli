@@ -13,6 +13,11 @@ def main():
     url = get_flag('url')
     if url == '':
         print('Usage: ./yt-cli.py {-u/--url} <url>')
+        return
+    
+    if os.path.isdir('./images') or os.path.isdir('./videos'):
+        print('Please make sure that there are no subdirectories in the working directory named "videos" or "images", as the script will delete them recursively.')
+        return
 
     frames = get_frames(url)
 
