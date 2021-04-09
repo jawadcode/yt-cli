@@ -6,13 +6,14 @@ A YouTube viewer for the command line
 
 ### Prerequisites:
 
+- Python 3
 - A "True Colour" capable terminal, run the following command to check (it should output the word "TRUECOLOUR" in orange):
 ```sh
 echo "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
-- [youtube-dl](https://github.com/ytdl-org/youtube-dl#installation) - Downloads the video
+- [youtube-dl](https://github.com/ytdl-org/youtube-dl#installation) - Downloads the video (**please update before running the script**)
 - [ffmpeg](https://ffmpeg.org/download.html) - Performs the conversion from video to images
-- [pillow](https://pillow.readthedocs.io/en/stable/installation.html) - Used to read the image files
+- [pillow](https://pillow.readthedocs.io/en/stable/installation.html) - Used to read the image files (**uninstall pil since it doesn't play nice with pillow**)
 
 ### How to run:
 
